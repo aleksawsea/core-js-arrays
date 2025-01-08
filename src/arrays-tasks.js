@@ -395,6 +395,8 @@ function generateOdds(len) {
  */
 function getElementByIndices(/* arr, indices */) {
   throw new Error('Not implemented');
+  // const match = arr[indices[0]];
+  // return indices.length === 1 ? arr[indices[0]] : getElementByIndices(arr.splice(indices[0], 1), indices.slice(1, indices.length));
 }
 
 /**
@@ -409,8 +411,9 @@ function getElementByIndices(/* arr, indices */) {
  *  getFalsyValuesCount([ -1, 'false', null, 0 ]) => 2
  *  getFalsyValuesCount([ null, undefined, NaN, false, 0, '' ]) => 6
  */
-function getFalsyValuesCount(/* arr */) {
-  throw new Error('Not implemented');
+function getFalsyValuesCount(arr) {
+  const falsyArr = arr.filter((elem) => !elem);
+  return falsyArr.length;
 }
 
 /**
